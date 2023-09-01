@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird</title>
+
+
+    <!-- CSS Responsivo-->
+        <link rel="stylesheet" href="css/styleTV.css">
+        <link rel="stylesheet" href="css/styleDesktop.css">
+        <link rel="stylesheet" href="css/styleNote-Tablet.css">
+        <link rel="stylesheet" href="css/styleCellNormal.css">
+        <link rel="stylesheet" href="css/styleSmallCell.css">
+    <!-- CSS Responsivo-->
+    
+</head>
+<body class="conteudo">
+    
+    <!--Musica quando iniciar o game-->
+    <audio id="sound1" preload="auto">
+        <source src="audios/musicGame.mp3" type="audio/mpeg">
+    </audio>
+    <!--Musica quando iniciar o game-->
+
+    <!--Som qunado o Passaro colidir-->
+        <audio id="PunchSound" src="audios/punch-140236.mp3"></audio>
+    <!--Som qunado o Passaro colidir-->
+
+    <!--Som Do Lobby Do Fliperama-->
+    <audio id="sound2" preload="auto">
+        <source src="audios/Burburinho De Pessoas.mp3" type="audio/mpeg">
+    </audio>
+    <!--Som Do Lobby Do Fliperama-->
+
+    <!--Som Passaro Passou pelas Barreias-->
+        <audio id="WinSound" src="audios/success-1-6297.mp3"></audio>
+    <!--Som Passaro Passou pelas Barreias-->
+
+    <!--Som Quando o Passaro Pular-->
+        <audio id="JumpPassaro" src="audios//cartoon-jump-6462.mp3"></audio>
+    <!--Som Quando o Passaro Pular-->
+
+
+
+    <video autoplay muted loop id="video-background">
+        <source src="video/FliperamaBackground-LargeTV.mp4" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
+    </video>    
+     
+    <div class="box-all">
+
+        <!--Parte De Cima-->
+        <div class="boxFliper-top">
+            <aside class="topFliper-left"></aside>
+            <div class="topFliper-center"> <img src="imagens/faixaFlappy-bottom.jpg" alt="" class="Fliperimgs"> </div>
+            <aside class="topFliper-right"></aside>
+        </div>
+        <!--Parte De Cima-->
+
+        <!--Parte Do Meio-->
+        <div class="boxFliper-center">
+            <aside class="centerFliper-left"></aside>
+            <div class="centerFliper-center">
+                <main tp-flappy>
+                    <button class="btnStart" id="playbutton">Começar</button>
+                    <div class="btnNone" id="PerdeuPlayboy">
+                        <h3>Game Over</h3>
+                        <button class="btnStart" id="recomecarOne">Recomeçar</button>
+                    </div>
+                    <img src="" alt="" class="passaro">
+                </main>
+            </div>
+            <aside class="centerFliper-right"></aside>
+        </div>
+        <!--Parte Do Meio-->
+
+        <!--Parte Div Deitada-->
+        <div class="boxBedFliper-contentBed">
+            <aside class="bedFliper-left"></aside>
+            <div class="bedFliper-center">
+
+                <section class="leverContainer">
+                    <div class="leverTop"></div>
+                    <div class="leverCable"></div>
+                    <div class="leverbottom"></div>
+                </section>
+
+                <div class="BedButtonAlign">
+
+                    <section class="BedNameAlign">
+                        <h3>Mute Lobby</h3>
+                        <h3>Mute Game</h3>
+                        <h3>Reiniciar</h3>
+                    </section>
+
+                    <section class="BedButtonAlignChild">
+                        <button class="btnFliper-Two" id="MuteGame"></button>
+                        <button class="btnFliper-Three" id="ReiniciarTwo"></button>
+                        <button class="btnFliper-One" id="MuteLobby"></button>
+                    </section>
+                    
+                </div>
+
+            </div>
+            <aside class="bedFliper-right"></aside>
+        </div>
+        <!--Parte Div Deitada-->
+
+        <!--Parte De Baixo-->
+        <div class="boxFliper-bottom">
+            <aside class="bottomFliper-left"></aside>
+            <div class="bottomFliper-center"> <img src="imagens/faixaFlappy-top.jpg"" class="Fliperimgs"> </div>
+            <aside class="bottomFliper-right"></aside>
+        </div>
+        <!--Parte De Baixo-->
+
+
+        
+    </div>  
+
+
+
+
+
+    <script src="js/flappy.js"></script>
+</body>
+</html>

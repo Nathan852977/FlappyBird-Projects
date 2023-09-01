@@ -1,0 +1,330 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@media screen and (min-width: 1201px) {
+
+html {
+    height: 100%;
+}
+* {
+    box-sizing: border-box;
+    
+}
+body {
+    margin: 0;
+    color: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100%;
+}
+.btnNone{
+    display: none;
+}
+.Game-Over{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 65px;
+    gap: 30px;
+    font-family: Pixel;
+    z-index: 10;
+}
+.centerDiv{
+    margin: auto auto auto auto;
+}
+
+#BackgroundFliperama{
+    width: 500px;
+    height: 800px;
+}
+@font-face {
+    font-family: "Pixel";
+    src: url("../fonts/Pixel.ttf");
+}
+[tp-flappy] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 5px solid dodgerblue;
+    height: 100%;
+    width: 100%;
+
+    background-color: deepskyblue;
+    overflow: hidden;
+}
+.passaro{
+    position: absolute;
+    width: 40px;
+    left: calc(50% - 30px);
+}
+
+.btnStart {
+	box-shadow: 3px 4px 0px 0px #a6827e;
+	background:linear-gradient(to bottom, #7d5d3b 5%, #634b30 100%);
+	background-color:#7d5d3b;
+	border-radius:15px;
+	border:1px solid #54381e;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:28px;
+	padding:15px 30px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #4d3534;
+}
+.btnStart:hover {
+	background:linear-gradient(to bottom, #634b30 5%, #7d5d3b 100%);
+	background-color:#634b30;
+}
+.btnStart:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+.par-de-barreiras{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.barreira{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.barreira .borda{
+    height: 30px;
+    width: 100px;
+    background: linear-gradient(90deg, #639301, #A5E82E);
+    border: 2px solid black;
+}
+
+.barreira .corpo{
+    height: 130px;
+    width: 80px;
+    background: linear-gradient(90deg, #639301, #A5E82E);
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+.progresso{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: Pixel;
+    font-size: 70px;
+    z-index: 100;
+}
+
+
+
+
+body{
+    background: linear-gradient(to bottom, #757abf 0%, #8583be 60%, #eab0d1 100%);
+    height: 100vh;
+    color: snow;
+    display: flex;
+    justify-content: center;
+    min-height: 100%;
+}
+#video-background {
+    position: fixed;
+    top: 10;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+.box-all{
+    width: 40%;
+    height: 87%;
+}
+.Fliperimgs{
+    width: 100%;
+    height: 100%;
+}
+.boxFliper-top{
+    z-index: 1;
+    height: 18%;
+    width: 100%;
+    display: flex;
+}
+.topFliper-left, .topFliper-right,
+.centerFliper-left, .centerFliper-right,
+.bedFliper-left, .bedFliper-right,
+.bottomFliper-left, .bottomFliper-right
+{
+    height: 100%;
+    width: 4%;
+    background-color: snow;
+    border: solid black 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.topFliper-center, .bottomFliper-center{
+    height: 100%;
+    width: 100%;
+    background-color: snow;
+    border: solid black 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.centerFliper-center, .bedFliper-center{
+    height: 100%;
+    width: 92%;
+    background-color: #181818;
+    border: solid black 5px;
+    border-bottom: solid snow 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.boxFliper-center{
+    height: 50%;
+    width: 85%;
+    margin: auto;
+    display: flex;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.boxBedFliper-contentBed{
+    width: 85%;
+    height: 22%;
+    margin: auto;
+    display: flex;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.boxFliper-top, .boxFliper-bottom {
+    background: linear-gradient(to bottom, #c0c0c0, #fff);
+}
+
+.topFliper-left, .centerFliper-left,
+.bedFliper-left, .bottomFliper-left {
+    border-right: 5px solid rgba(0, 0, 0, 0.5);
+}
+
+.topFliper-right, .centerFliper-right,
+.bedFliper-right, .bottomFliper-right {
+    border-left: 5px solid rgba(0, 0, 0, 0.5);
+}
+.boxBedFliper-contentBed {
+    width: 85%;
+    height: 22%;
+    margin: auto;
+    display: flex;
+    perspective: 15cm;
+}
+.bedFliper-left, .bedFliper-right{
+    background-color: snow;
+    border: solid black 5px;
+    transform: rotateX(45deg) rotateY(0deg);
+    transform-origin: center top; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+}
+
+.bedFliper-center {
+    overflow: hidden;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    background-color: #181818;
+    border: solid black 5px;
+    transform: rotateX(45deg) rotateY(0deg);
+    transform-origin: center top; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+}
+.boxFliper-bottom{
+    position: relative;
+    right: 9%;
+    bottom: 5%;
+    width: 118%;
+    height: 22%;
+    margin: auto;
+    display: flex;
+    perspective: 15%;
+}
+[tp-flappy]{
+    border: solid snow 5px;
+    height: 90%;
+    width: 90%;
+    position: relative;
+    top: 4%;
+    margin: auto;
+}
+.btnFliper-One, .btnFliper-Two, .btnFliper-Three{
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: red;
+}.btnFliper-Two{
+    background-color: yellow;
+}.btnFliper-Three{
+    background-color: blue;
+}
+.btnFliper-One:hover{
+    width: 35px;
+    height: 35px;
+    background-color: rgb(175, 39, 39);
+}
+.btnFliper-Two:hover{
+    width: 35px;
+    height: 35px;
+    background-color: rgb(192, 192, 32);
+}
+.btnFliper-Three:hover{
+    width: 35px;
+    height: 35px;
+    background-color: rgb(45, 45, 163);
+}
+
+.BedButtonAlign{
+    font-size: 15px;
+    position: relative;
+    top: 50%;
+}
+.BedNameAlign{
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+}
+.BedButtonAlignChild{
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+}
+.leverTop{
+    width: 35px;
+    height: 35px;
+    background-color: green;
+    border-radius: 50%;
+    border: solid black;
+    margin: auto;
+}
+.leverCable{
+    margin: auto;
+    background-color: black;
+    height: 60px;
+    width: 10px;
+}
+.leverbottom{
+    background-color: black;
+    height: 15px;
+    width: 50px;
+}
+.leverContainer{
+    position: relative;
+    top: 30%;
+    left: 10%;
+}
+}
